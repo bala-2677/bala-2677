@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BALA | Balasubramanian M - Photographer &amp; Graphic Designer</title>
+  <meta name="description" content="Portfolio of Balasubramanian M - Photographer and Graphic Designer. Bird Photography, Bridal Shoots, Music Posters, and Brand Identity.">
+  <meta name="author" content="Balasubramanian M">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Balasubramanian M | Photographer & Graphic Designer">
+  <meta property="og:description" content="Turning ideas into powerful digital experience. Nature Photography, Bridal Shoots, Music Posters & Logo Breakdown.">
+  <meta property="og:image" content="images/hero_bala.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/star.png">
+
+  <!-- Google Fonts: Space Grotesk, Orbitron, Alex Brush, Cinzel, Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Chakra+Petch:wght@500;600;700&family=Cinzel:wght@600;700;800;900&family=Orbitron:wght@700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Custom Cursor Glow Follower -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- Interactive Canvas Particles (Stars & Nebulae) -->
+  <canvas id="starCanvas"></canvas>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#intro" class="brand-logo" aria-label="Bala Home">
+        <span class="logo-text">BALA</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#intro" class="nav-link active">INTRO</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">ABOUT</a></li>
+          <li class="nav-item"><a href="#works" class="nav-link">WORKS</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger for Mobile -->
+      <div class="nav-actions">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="brand-logo">
+        <span class="logo-text">BALA</span>
+      </div>
+      <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#intro" class="mobile-nav-link active">INTRO</a></li>
+      <li><a href="#about" class="mobile-nav-link">ABOUT</a></li>
+      <li><a href="#works" class="mobile-nav-link">WORKS</a></li>
+      <li><a href="#contact" class="mobile-nav-link">CONTACT</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <a href="#contact" class="btn-primary mobile-cta">Hire me ↗</a>
+      <div class="mobile-socials">
+        <a href="https://wa.me/91790426131" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:balasubramanian2677@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== HERO / INTRO SECTION ==================== -->
+    <section class="hero-section" id="intro">
+      <!-- Huge Stylized Background Typography matching Figma screenshot -->
+      <div class="hero-bg-title-wrapper" data-speed="0.2">
+        <h1 class="hero-bg-title">
+          <span class="title-part-white">BALASUB</span><span class="title-part-red">RAMANIAN</span>
+        </h1>
+      </div>
+
+      <!-- Twinkling Floating Star Sprites -->
+      <div class="floating-stars-layer" aria-hidden="true">
+        <img src="images/star.png" alt="" class="star-sprite star-1">
+        <img src="images/star.png" alt="" class="star-sprite star-2">
+        <img src="images/star.png" alt="" class="star-sprite star-3">
+        <img src="images/star.png" alt="" class="star-sprite star-4">
+        <img src="images/star.png" alt="" class="star-sprite star-5">
+        <img src="images/star.png" alt="" class="star-sprite star-6">
+        <img src="images/star.png" alt="" class="star-sprite star-7">
+        <img src="images/star.png" alt="" class="star-sprite star-8">
+      </div>
+
+      <div class="container hero-container">
+        <!-- Hero Left Column: Info & CTA -->
+        <div class="hero-left hero-animate-left">
+          <span class="hero-hello-tag">HELLO</span>
+
+          <h2 class="hero-name-heading">
+            I'm Balasubramanian.M
+          </h2>
+
+          <p class="hero-role-text">
+            <span class="role-bold">PHOTOGRAPHER</span>
+            <span class="role-and">and</span>
+            <span class="role-bold">GRAPHIC DESIGNER</span>
+          </p>
+
+          <div class="hero-button-row">
+            <a href="#about" class="btn-more-about">
+              <span>MORE ABOUT ME</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Center: Balasubramanian Cutout with 3D Parallax -->
+        <div class="hero-center hero-animate-center">
+          <div class="hero-photo-wrap" id="heroImageWrapper">
+            <div class="hero-radial-glow"></div>
+            <img src="images/hero_bala.png" alt="Balasubramanian M" class="hero-cutout-img" id="heroImage">
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Artistic Slogan matching Figma layout -->
+        <div class="hero-right hero-animate-right">
+          <div class="hero-slogan-block">
+            <p class="slogan-line">Turning ideas</p>
+            <p class="slogan-line">into powerful</p>
+            <p class="slogan-line">digital experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ME SECTION ==================== -->
+    <section class="about-section" id="about">
+      <div class="container about-container">
+        <!-- About Left Column: Text, Software, and Action Buttons -->
+        <div class="about-left" data-aos="fade-up">
+          <h2 class="about-title">About Me</h2>
+
+          <p class="about-description">
+            Creative Photographer and Graphic Designer passionate about capturing memorable moments and creating visually appealing designs that communicate ideas, express creativity, and leave a lasting impression.
+          </p>
+
+          <!-- Software Skills Badges matching exact Figma row -->
+          <div class="software-row">
+            <div class="soft-badge ps" data-tooltip="Adobe Photoshop">
+              <span>Ps</span>
+            </div>
+            <div class="soft-badge lrc" data-tooltip="Adobe Lightroom Classic">
+              <span>Lrc</span>
+            </div>
+            <div class="soft-badge ai" data-tooltip="Adobe Illustrator">
+              <span>Ai</span>
+            </div>
+            <div class="soft-badge pr" data-tooltip="Adobe Premiere Pro">
+              <span>Pr</span>
+            </div>
+            <div class="soft-badge figma" data-tooltip="Figma UI/UX">
+              <!-- Figma Logo SVG -->
+              <svg width="20" height="30" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+                <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+                <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+                <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+                <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Action Navigation Pills Row matching Figma screenshot -->
+          <div class="action-pills-row">
+            <a href="#works" class="figma-pill pill-orange">
+              <span>View My Works</span>
+            </a>
+            <a href="#contact" class="figma-pill pill-dark">
+              <span>Contact Me</span>
+            </a>
+            <a href="https://wa.me/91790426131?text=Hello%20Balasubramanian,%20I%20am%20interested%20in%20working%20with%20you!" target="_blank" rel="noopener" class="figma-pill pill-green">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Whatsapp</span>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="figma-pill pill-pink">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- About Right Column: Camera Portrait (Only Image, No Border Circles) -->
+        <div class="about-right" data-aos="zoom-in" data-aos-delay="200">
+          <div class="about-photo-wrapper">
+            <img src="images/about_bala.jpg" alt="Balasubramanian holding camera" class="about-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WORKS SECTION ==================== -->
+    <section class="works-section" id="works">
+      <div class="container">
+        <!-- Works Section Header -->
+        <div class="works-header" data-aos="fade-up">
+          <h2 class="works-title">Works</h2>
+        </div>
+
+        <!-- SUBSECTION 1: BIRD PHOTOGRAPHY (4 PHOTOS COLLAGE) -->
+        <div class="bird-photography-subsection" id="bird-photography">
+          <div class="bird-title-wrap" data-aos="fade-up">
+            <h3 class="bird-script-heading">Bird Photography</h3>
+          </div>
+
+          <div class="bird-collage-grid">
+            <!-- Top Left: Bird 2 (Beak close-up) -->
+            <div class="gallery-item bird-item bird-item-topleft tilt-card" data-aos="fade-right" data-title="Great White Egret - Focus Beak" data-category="Bird Photography" data-img="images/bird_2.jpg">
+              <div class="gallery-img-box">
+                <img src="images/bird_2.jpg" alt="Great White Egret face close up" loading="lazy">
+                <div class="gallery-overlay">
+                  <div class="overlay-text">
+                    <span class="overlay-cat">Wildlife</span>
+                    <h4>Golden Beak</h4>
+                  </div>
+                  <button class="view-btn" aria-label="View bird photo"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top Right: Bird 4 (Tall bird in grass/reeds) -->
+            <div class="gallery-item bird-item bird-item-topright tilt-card" data-aos="fade-left" data-title="Heron in Reeds - Serene Portrait" data-category="Bird Photography" data-img="images/bird_4.jpg">
+              <div class="gallery-img-box">
+                <img src="images/bird_4.jpg" alt="White bird standing tall in grass" loading="lazy">
+                <div class="gallery-overlay">
+                  <div class="overlay-text">
+                    <span class="overlay-cat">Wildlife</span>
+                    <h4>Among The Reeds</h4>
+                  </div>
+                  <button class="view-btn" aria-label="View bird photo"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Left: Bird 3 (Bird in sky) -->
+            <div class="gallery-item bird-item bird-item-bottomleft tilt-card" data-aos="fade-up" data-title="Wings in the Sky - Solo Flight" data-category="Bird Photography" data-img="images/bird_3.jpg">
+              <div class="gallery-img-box">
+                <img src="images/bird_3.jpg" alt="White bird soaring in sky" loading="lazy">
+                <div class="gallery-overlay">
+                  <div class="overlay-text">
+                    <span class="overlay-cat">Wildlife</span>
+                    <h4>Flight in the Sky</h4>
+                  </div>
+                  <button class="view-btn" aria-label="View bird photo"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Center Tag: Nature (Nat in white, ure in green) -->
+            <div class="nature-tag-center" data-aos="zoom-in">
+              <span class="nat-white">Nat</span><span class="ure-green">ure</span>
+            </div>
+
+            <!-- Bottom Right: Bird 1 (Wide bird landing/flying low) -->
+            <div class="gallery-item bird-item bird-item-bottomright tilt-card" data-aos="fade-up" data-aos-delay="150" data-title="Wide Flight - Skimming the Field" data-category="Bird Photography" data-img="images/bird_1.jpg">
+              <div class="gallery-img-box">
+                <img src="images/bird_1.jpg" alt="White bird landing with wide wings" loading="lazy">
+                <div class="gallery-overlay">
+                  <div class="overlay-text">
+                    <span class="overlay-cat">High-Speed Motion</span>
+                    <h4>Wings Over Meadows</h4>
+                  </div>
+                  <button class="view-btn" aria-label="View bird photo"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUBSECTION 2: BRIDAL SHOOT (4 PHOTOS COLLAGE) -->
+        <div class="bridal-shoot-subsection" id="bridal-shoot">
+          <div class="bridal-title-wrap" data-aos="fade-up">
+            <h3 class="bridal-heading">
+              <span class="bridal-white">BRIDAL</span> <span class="shoot-purple">SHOOT</span>
+            </h3>
+          </div>
+
+          <div class="bridal-collage-grid">
+            <!-- Left Large Bridal Portrait -->
+            <div class="gallery-item bridal-item bridal-item-left tilt-card" data-aos="fade-right" data-title="Traditional Elegance - Golden Saree" data-category="Bridal Shoot" data-img="images/bridal_1.jpg">
+              <div class="gallery-img-box">
+                <img src="images/bridal_1.jpg" alt="Indian bride posing in traditional silk saree and temple jewelry" loading="lazy">
+                <div class="gallery-overlay">
+                  <div class="overlay-text">
+                    <span class="overlay-cat">Bridal Portrait</span>
+                    <h4>Royal Heritage</h4>
+                  </div>
+                  <button class="view-btn" aria-label="View bridal photo"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Center Column: Stacked 2 Photos -->
+            <div class="bridal-center-column">
+              <!-- Center Top (Smile) -->
+              <div class="gallery-item bridal-item bridal-item-top tilt-card" data-aos="fade-up" data-title="Bridal Radiance - Golden Smile" data-category="Bridal Shoot" data-img="images/bridal_2.jpg">
+                <div class="gallery-img-box">
+                  <img src="images/bridal_2.jpg" alt="Bride smiling warmly in golden silk saree" loading="lazy">
+                  <div class="gallery-overlay">
+                    <div class="overlay-text">
+                      <span class="overlay-cat">Candid Warmth</span>
+                      <h4>Radiant Smile</h4>
+                    </div>
+                    <button class="view-btn" aria-label="View bridal photo"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Center Bottom (Purple backdrop candid) -->
+              <div class="gallery-item bridal-item bridal-item-bottom tilt-card" data-aos="fade-up" data-aos-delay="150" data-title="Traditional Poise - Earring Adjustment" data-category="Bridal Shoot" data-img="images/bridal_3.jpg">
+                <div class="gallery-img-box">
+                  <img src="images/bridal_3.jpg" alt="Bride against purple backdrop adjusting earring" loading="lazy">
+                  <div class="gallery-overlay">
+                    <div class="overlay-text">
+                      <span class="overlay-cat">Bridal Prep</span>
+                      <h4>The Preparation</h4>
+                    </div>
+                    <button class="view-btn" aria-label="View bridal photo"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Hand near face portrait -->
+            <div class="gallery-item bridal-item bridal-item-right tilt-card" data-aos="fade-left" data-aos-delay="250" data-title="Artistic Gaze - Maang Tikka & Henna" data-category="Bridal Shoot" data-img="images/bridal_4.jpg">
+              <div class="gallery-img-box">
+                <img src="images/bridal_4.jpg" alt="Artistic bridal portrait with hand covering half of face" loading="lazy">
+                <div class="gallery-overlay">
+                  <div class="overlay-text">
+                    <span class="overlay-cat">Artistic Close-up</span>
+                    <h4>Intricate Beauty</h4>
+                  </div>
+                  <button class="view-btn" aria-label="View bridal photo"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUBSECTION 3: POSTERS DESIGN & LOGOS PROJECT -->
+        <div class="posters-logos-subsection" id="design-project">
+          <!-- Main Subsection Title matching Figma screenshot -->
+          <div class="posters-title-wrap" data-aos="fade-up">
+            <h3 class="posters-main-heading">
+              <span class="heading-line-1">
+                <span class="pink-my">My</span>
+                <span class="white-posters">POSTERS DESIGN</span>
+              </span>
+              <span class="heading-line-2">
+                <span class="white-logos">&amp; LOGOS</span>
+                <span class="pink-project">project</span>
+              </span>
+            </h3>
+          </div>
+
+          <div class="posters-showcase-grid">
+            <!-- Left Column: Billie Eilish Poster & Typography Block -->
+            <div class="posters-col posters-col-left" data-aos="fade-up">
+              <!-- Billie Eilish Poster -->
+              <div class="gallery-item poster-item poster-item-billie tilt-card" data-title="Billie Eilish - BLUE | Spotify Edition Poster" data-category="Poster Design" data-img="images/poster_billie.jpg">
+                <div class="gallery-img-box">
+                  <img src="images/poster_billie.jpg" alt="Billie Eilish Blue Spotify poster" loading="lazy">
+                  <div class="gallery-overlay">
+                    <div class="overlay-text">
+                      <span class="overlay-cat">Music Artwork</span>
+                      <h4>Billie Eilish • BLUE</h4>
+                    </div>
+                    <button class="view-btn" aria-label="View poster"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MY POSTERS Typography Block matching Figma screenshot -->
+              <div class="posters-slogan-card">
+                <h4 class="serif-my">MY</h4>
+                <h4 class="blue-posters">POSTERS</h4>
+                <p class="song-tells-story">
+                  Every song tells a<br>
+                  story<br>
+                  words never could
+                </p>
+              </div>
+            </div>
+
+            <!-- Middle Column: Stack of 3 Music Posters -->
+            <div class="posters-col posters-col-center" data-aos="fade-up" data-aos-delay="150">
+              <!-- 1. The Weeknd / Mind wants to dance poster -->
+              <div class="gallery-item poster-item poster-stacked tilt-card" data-title="The Weeknd - Trilogy Spotify Poster" data-category="Poster Design" data-img="images/poster_music.jpg">
+                <div class="gallery-img-box">
+                  <img src="images/poster_music.jpg" alt="The Weeknd Spotify lyric poster" loading="lazy">
+                  <div class="gallery-overlay">
+                    <div class="overlay-text">
+                      <span class="overlay-cat">Spotify Lyric</span>
+                      <h4>The Weeknd • Trilogy</h4>
+                    </div>
+                    <button class="view-btn" aria-label="View poster"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Lana Del Rey poster -->
+              <div class="gallery-item poster-item poster-stacked tilt-card" data-title="Lana Del Rey - Monochrome Vintage Poster" data-category="Poster Design" data-img="images/poster_lana.jpg">
+                <div class="gallery-img-box">
+                  <img src="images/poster_lana.jpg" alt="Lana Del Rey monochrome poster" loading="lazy">
+                  <div class="gallery-overlay">
+                    <div class="overlay-text">
+                      <span class="overlay-cat">Indie Vintage</span>
+                      <h4>Lana Del Rey</h4>
+                    </div>
+                    <button class="view-btn" aria-label="View poster"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. HanumanKind Run It Up poster -->
+              <div class="gallery-item poster-item poster-stacked tilt-card" data-title="HanumanKind - Run It Up Track Art" data-category="Poster Design" data-img="images/poster_runup.jpg">
+                <div class="gallery-img-box">
+                  <img src="images/poster_runup.jpg" alt="HanumanKind Run It Up poster" loading="lazy">
+                  <div class="gallery-overlay">
+                    <div class="overlay-text">
+                      <span class="overlay-cat">Hip Hop Track</span>
+                      <h4>HanumanKind • Run It Up</h4>
+                    </div>
+                    <button class="view-btn" aria-label="View poster"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Logo Breakdown & Eco Jute Packaging -->
+            <div class="posters-col posters-col-right" data-aos="fade-up" data-aos-delay="300">
+              <!-- Logo Breakdown Board -->
+              <div class="gallery-item logo-item logo-item-breakdown tilt-card" data-title="Brand Guidelines & Logo Breakdown" data-category="Brand Identity" data-img="images/logo_breakdown.jpg">
+                <div class="gallery-img-box">
+                  <img src="images/logo_breakdown.jpg" alt="Logo Breakdown boards mockup" loading="lazy">
+                  <div class="gallery-overlay">
+                    <div class="overlay-text">
+                      <span class="overlay-cat">Brand Identity</span>
+                      <h4>Logo Breakdown</h4>
+                    </div>
+                    <button class="view-btn" aria-label="View breakdown"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LOGO Breakdown Typography -->
+              <div class="logo-breakdown-typography">
+                <span class="logo-white-bold">LOGO</span>
+                <span class="breakdown-purple-bold">Breakdown</span>
+              </div>
+
+              <!-- Eco Jute Bag Package Mockup -->
+              <div class="gallery-item logo-item jute-item tilt-card" data-title="Eco Kraft Pouch - Palm Leaf Logo" data-category="Packaging Design" data-img="images/logo_jute_bag.jpg">
+                <div class="gallery-img-box">
+                  <img src="images/logo_jute_bag.jpg" alt="Eco kraft jute pouch mockup with palm logo" loading="lazy">
+                  <div class="gallery-overlay">
+                    <div class="overlay-text">
+                      <span class="overlay-cat">Packaging Design</span>
+                      <h4>Panai Amudhu Kraft Pouch</h4>
+                    </div>
+                    <button class="view-btn" aria-label="View package"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ("Lets Connect there") ==================== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <!-- Contact Header with 'Hire me' CTA button -->
+        <div class="contact-header-bar" data-aos="fade-up">
+          <h2 class="connect-title">Lets Connect there</h2>
+          <a href="#messageForm" class="btn-hire-orange">
+            <span>Hire me</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <!-- Contact Box Container -->
+        <div class="contact-card-container" data-aos="zoom-in" data-aos-delay="150">
+          <!-- Left Panel: Ocean Blue Gradient with Circles Watermark -->
+          <div class="contact-left-card">
+            <div class="left-card-inner">
+              <h3 class="contact-panel-title">Contact Information</h3>
+              <p class="contact-panel-subtitle">Say something to start a live chat!</p>
+
+              <div class="contact-rows-list">
+                <!-- Phone -->
+                <a href="tel:+91790426131" class="contact-row">
+                  <span class="row-icon"><i class="fa-solid fa-phone"></i></span>
+                  <span class="row-value">790426131</span>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:balasubramanian2677@gmail.com" class="contact-row">
+                  <span class="row-icon"><i class="fa-regular fa-envelope"></i></span>
+                  <span class="row-value">balasubramanian2677@gmail.com</span>
+                </a>
+
+                <!-- Address -->
+                <div class="contact-row">
+                  <span class="row-icon"><i class="fa-solid fa-location-dot"></i></span>
+                  <span class="row-value">132 Dartmouth Street Boston,<br>Massachusetts 02156 United States</span>
+                </div>
+              </div>
+
+              <!-- 3 Social Circle Buttons matching Figma (WhatsApp, Instagram, Dribbble/Behance) -->
+              <div class="social-circles-group">
+                <a href="https://wa.me/91790426131" target="_blank" rel="noopener" class="circle-social-btn circle-whatsapp" aria-label="WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="circle-social-btn circle-instagram" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://dribbble.com" target="_blank" rel="noopener" class="circle-social-btn circle-dribbble" aria-label="Dribbble">
+                  <i class="fa-brands fa-dribbble"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Concentric Circles Pattern (Figma element) -->
+            <div class="blue-circles-watermark" aria-hidden="true">
+              <div class="circle-ring-1"></div>
+              <div class="circle-ring-2"></div>
+            </div>
+          </div>
+
+          <!-- Right Panel: Send a Message Form with Underline Inputs -->
+          <div class="contact-right-card">
+            <h3 class="form-panel-title">Send a Message</h3>
+            <p class="form-panel-subtitle">
+              Fill out this quick form — it will automatically compose and open your WhatsApp chat with me!
+            </p>
+
+            <form class="underline-form" id="messageForm" novalidate>
+              <!-- Row 1: First Name & Last Name -->
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="Bruce" required autocomplete="given-name">
+                  <span class="error-msg" id="firstNameError"></span>
+                </div>
+
+                <div class="form-field">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Wayne" required autocomplete="family-name">
+                  <span class="error-msg" id="lastNameError"></span>
+                </div>
+              </div>
+
+              <!-- Row 2: Email & Phone Number -->
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="bruce@waynecorp.com" required autocomplete="email">
+                  <span class="error-msg" id="emailError"></span>
+                </div>
+
+                <div class="form-field">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+1 012 3456 789" autocomplete="tel">
+                  <span class="error-msg" id="phoneError"></span>
+                </div>
+              </div>
+
+              <!-- Row 3: Message -->
+              <div class="form-field field-full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="3" placeholder="Write your message.." required></textarea>
+                <span class="error-msg" id="messageError"></span>
+              </div>
+
+              <!-- Action Row: Send Button + Paper Plane Illustration -->
+              <div class="form-action-row">
+                <div class="paper-plane-decor" aria-hidden="true">
+                  <!-- Dotted trajectory SVG curve leading to plane -->
+                  <svg width="120" height="40" viewBox="0 0 120 40" fill="none">
+                    <path d="M5 35 C 40 40, 70 10, 110 15" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  </svg>
+                  <i class="fa-solid fa-paper-plane plane-icon"></i>
+                </div>
+
+                <button type="submit" class="btn-send-orange" id="sendWhatsappBtn">
+                  <span>Send Whatsapp</span>
+                </button>
+              </div>
+
+              <!-- Live Feedback Alert -->
+              <div class="form-alert" id="formFeedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="logo-text">BALA</span>
+        <p class="copyright-text">&copy; <span id="currentYear">2026</span> Balasubramanian M. Photographer &amp; Graphic Designer.</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#intro">Intro</a>
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== LIGHTBOX MODAL ==================== -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-dialog">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <button class="lightbox-nav-btn prev-btn" id="lightboxPrevBtn" aria-label="Previous artwork">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="lightbox-figure">
+        <img src="" alt="" class="lightbox-img" id="lightboxImg">
+        <div class="lightbox-caption">
+          <span class="lightbox-category" id="lightboxCategory"></span>
+          <h3 class="lightbox-title" id="lightboxTitle"></h3>
+        </div>
+      </div>
+
+      <button class="lightbox-nav-btn next-btn" id="lightboxNextBtn" aria-label="Next artwork">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+
+
+  <!-- Main JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
