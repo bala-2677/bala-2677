@@ -381,7 +381,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailError = document.getElementById('emailError');
   const messageError = document.getElementById('messageError');
 
-  const BALA_WHATSAPP_NUMBER = '91790426131';
+  const BALA_WHATSAPP_NUMBER = '917904296131';
 
   const clearFormErrors = () => {
     [firstNameError, lastNameError, emailError, messageError].forEach((err) => {

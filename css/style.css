@@ -32,13 +32,15 @@
   --accent-blue-posters: #29b6f6;
   --accent-magenta-breakdown: #d946ef;
 
-  /* Typography */
-  --font-ui: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-techno: 'Space Grotesk', 'Chakra Petch', sans-serif;
-  --font-display: 'Orbitron', 'Space Grotesk', sans-serif;
-  --font-script: 'Alex Brush', cursive;
-  --font-serif-fashion: 'Cinzel', 'Playfair Display', serif;
-  --font-serif-editorial: 'Playfair Display', serif;
+  /* Typography mapped directly from Desktop - 1 Figma file */
+  --font-ui: 'Raleway', sans-serif;
+  --font-techno: 'Orbitron', 'Space Grotesk', sans-serif;
+  --font-display: 'Orbitron', sans-serif;
+  --font-script: 'Hurricane', cursive;
+  --font-serif-fashion: 'Bodoni Moda SC', serif;
+  --font-homenaje: 'Homenaje', sans-serif;
+  --font-kanit: 'Kanit', sans-serif;
+  --font-raleway: 'Raleway', sans-serif;
 
   /* Layout */
   --container-max: 1200px;
@@ -252,10 +254,10 @@ main {
 }
 
 .nav-link {
-  font-family: var(--font-ui);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-family: var(--font-homenaje);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
   color: var(--text-light-gray);
   text-transform: uppercase;
   position: relative;
@@ -463,29 +465,30 @@ main {
 
 .hero-bg-title {
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 7.8vw, 8.2rem);
+  font-size: clamp(1.8rem, 7.5vw, 8.2rem);
   font-weight: 900;
-  letter-spacing: 0.14em;
+  letter-spacing: clamp(0.06em, 1.2vw, 0.14em);
   text-transform: uppercase;
   white-space: nowrap;
   user-select: none;
   line-height: 1;
-}
-
-.title-part-white {
-  background: linear-gradient(180deg, #ffffff 20%, #8c93a0 100%);
+  background: linear-gradient(90deg, #C9C9C9 38.46%, #CD4E4E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0.95;
-  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.25));
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  filter: drop-shadow(0 0 25px rgba(205, 78, 78, 0.35)) drop-shadow(0 0 15px rgba(201, 201, 201, 0.2));
+  transition: transform 0.2s ease-out;
 }
 
+.title-part-white,
 .title-part-red {
-  background: linear-gradient(180deg, #ff6b6b 20%, #d42a2a 100%);
+  background: inherit;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0.95;
-  filter: drop-shadow(0 0 25px rgba(255, 59, 48, 0.45));
+  background-clip: text;
+  color: transparent;
 }
 
 /* Scattered Floating Stars Layer */
@@ -546,30 +549,31 @@ main {
 }
 
 .hero-hello-tag {
-  font-family: var(--font-techno);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--accent-red);
+  font-family: var(--font-homenaje);
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: #a83030;
   text-transform: uppercase;
 }
 
 .hero-name-heading {
-  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
-  font-weight: 700;
+  font-family: var(--font-raleway);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 900;
   line-height: 1.2;
   color: var(--text-white);
 }
 
 .hero-role-text {
-  font-family: var(--font-techno);
-  font-size: 0.88rem;
-  letter-spacing: 0.1em;
-  color: var(--text-light-gray);
+  font-family: var(--font-raleway);
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  color: var(--text-white);
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
@@ -578,9 +582,11 @@ main {
 }
 
 .role-and {
-  color: var(--accent-red);
+  font-family: var(--font-homenaje);
+  color: #a83030;
   text-transform: lowercase;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 1.25rem;
 }
 
 .hero-button-row {
@@ -589,23 +595,23 @@ main {
 
 .btn-more-about {
   display: inline-block;
-  padding: 12px 26px;
-  background: rgba(0, 0, 0, 0.4);
-  border: 1.5px solid rgba(255, 255, 255, 0.75);
-  border-radius: 2px;
+  padding: 12px 28px;
+  background: #4d4d4d;
+  border: 1.5px solid #ffffff;
+  border-radius: 4px;
   color: var(--text-white);
-  font-family: var(--font-techno);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-family: var(--font-homenaje);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: var(--transition-normal);
 }
 
 .btn-more-about:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.18);
   border-color: #ffffff;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.35);
   transform: translateY(-2px);
 }
 
@@ -631,8 +637,8 @@ main {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 580px;
-  height: 580px;
+  width: clamp(260px, 50vw, 580px);
+  height: clamp(260px, 50vw, 580px);
   background: radial-gradient(circle, rgba(255, 255, 255, 0.14) 0%, rgba(255, 59, 48, 0.1) 50%, transparent 75%);
   filter: blur(55px);
   border-radius: 50%;
@@ -645,7 +651,7 @@ main {
   width: 100%;
   max-width: 780px;
   max-height: 860px;
-  min-height: 560px;
+  min-height: clamp(260px, 42vw, 560px);
   height: auto;
   object-fit: contain;
   margin-bottom: -5px;
@@ -693,18 +699,21 @@ main {
 }
 
 .about-title {
+  font-family: var(--font-kanit);
   font-size: clamp(2rem, 3.5vw, 2.7rem);
-  font-weight: 700;
+  font-weight: 400;
   color: var(--text-white);
   margin-bottom: 22px;
 }
 
 .about-description {
-  font-size: 0.98rem;
-  line-height: 1.75;
+  font-family: var(--font-raleway);
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.7;
   color: #cfd6e0;
   margin-bottom: 34px;
-  max-width: 530px;
+  max-width: 720px;
 }
 
 /* Software Badges Row */
@@ -902,12 +911,12 @@ main {
 }
 
 .works-title {
-  font-family: var(--font-techno);
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  font-family: var(--font-kanit);
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
   color: var(--text-white);
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 /* Common Gallery Hover Overlay & Button */
@@ -1000,12 +1009,12 @@ main {
 
 .bird-script-heading {
   font-family: var(--font-script);
-  font-size: clamp(3.2rem, 6vw, 5rem);
+  font-size: clamp(3.2rem, 6vw, 6rem);
   font-weight: 400;
-  background: linear-gradient(135deg, #f5e49b 0%, #cbd265 100%);
+  background: linear-gradient(90deg, #ffffff 24.79%, #6f7708 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 20px rgba(238, 212, 136, 0.3));
+  filter: drop-shadow(0 0 20px rgba(111, 119, 8, 0.3));
   line-height: 1.1;
   letter-spacing: 0.02em;
 }
@@ -1084,18 +1093,21 @@ main {
 
 .bridal-heading {
   font-family: var(--font-serif-fashion);
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  font-weight: 700;
-  letter-spacing: 0.22em;
+  font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
+  background: linear-gradient(90deg, #ffffff 37.95%, #491d87 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
-.bridal-white {
-  color: #ffffff;
-}
-
+.bridal-white,
 .shoot-purple {
-  color: var(--accent-purple-shoot);
+  background: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bridal-collage-grid {
@@ -1186,10 +1198,10 @@ main {
 /* 3-Column Showcase Grid */
 .posters-showcase-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1.55fr;
-  gap: 20px;
+  grid-template-columns: 1.55fr 1fr 1.6fr;
+  gap: 24px;
   align-items: stretch;
-  max-width: 1100px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -1204,12 +1216,21 @@ main {
 }
 
 .poster-item-billie {
-  height: 485px;
+  width: 100%;
+  aspect-ratio: 1200 / 1697;
+  height: auto;
   border-radius: 4px;
 }
 
+.poster-item-billie .gallery-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .posters-slogan-card {
-  padding-top: 20px;
+  padding-top: 24px;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -1217,7 +1238,7 @@ main {
 
 .serif-my {
   font-family: var(--font-serif-fashion);
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   font-weight: 900;
   letter-spacing: 0.12em;
   color: #ffffff;
@@ -1226,7 +1247,7 @@ main {
 
 .blue-posters {
   font-family: var(--font-display);
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 900;
   letter-spacing: 0.16em;
   color: var(--accent-blue-posters);
@@ -1243,15 +1264,24 @@ main {
   letter-spacing: 0.02em;
 }
 
-/* Middle Column: Stacked 3 Posters */
+/* Middle Column: Stacked 3 Music Posters (Full View 4:5 Aspect Ratio) */
 .posters-col-center {
-  gap: 16px;
+  gap: 14px;
   justify-content: space-between;
 }
 
 .poster-stacked {
-  height: 236px;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  height: auto;
   border-radius: 4px;
+}
+
+.poster-stacked .gallery-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Right Column: Logo Breakdown Typography & Jute Bag */
@@ -1260,12 +1290,21 @@ main {
 }
 
 .logo-item-breakdown {
-  height: 215px;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  height: auto;
   border-radius: 4px;
 }
 
+.logo-item-breakdown .gallery-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .logo-breakdown-typography {
-  padding: 14px 0;
+  padding: 12px 0;
   text-align: left;
 }
 
@@ -1292,8 +1331,18 @@ main {
 }
 
 .jute-item {
-  height: 410px;
+  width: 100%;
+  aspect-ratio: 2506 / 3072;
+  height: auto;
   border-radius: 4px;
+  background-color: #535470;
+}
+
+.jute-item .gallery-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* -------------------------------------------------------------
@@ -1312,22 +1361,24 @@ main {
 }
 
 .connect-title {
-  font-size: clamp(2rem, 3.8vw, 2.9rem);
-  font-weight: 700;
-  color: var(--text-white);
+  font-family: var(--font-raleway);
+  font-size: clamp(2.2rem, 4.4vw, 3.8rem);
+  font-weight: 400;
+  color: #fcfcfd;
 }
 
 .btn-hire-orange {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 26px;
-  background: var(--accent-orange-grad);
-  border-radius: 24px;
+  padding: 10px 28px;
+  background: #fd853a;
+  border-radius: 60px;
   color: #ffffff;
-  font-weight: 700;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 16px rgba(241, 91, 42, 0.4);
+  font-family: var(--font-raleway);
+  font-weight: 500;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 16px rgba(253, 133, 58, 0.4);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
@@ -1910,12 +1961,15 @@ main {
 /* -------------------------------------------------------------
    17. RESPONSIVE DESIGN (MEDIA QUERIES)
    ------------------------------------------------------------- */
+
+/* --- TABLETS / SMALL LAPTOPS (max-width: 1050px) --- */
 @media (max-width: 1050px) {
   .hero-container {
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 20px;
   }
-  .hero-left, .hero-right {
+  .hero-left {
     margin-bottom: 20px;
   }
   .hero-photo-wrap {
@@ -1923,35 +1977,90 @@ main {
   }
   .hero-cutout-img {
     max-height: 600px;
+    min-height: 380px;
   }
   .hero-right {
     grid-column: 1 / -1;
     justify-content: center;
+    margin-bottom: 25px;
   }
   .hero-slogan-block {
     text-align: center;
   }
+
+  /* Bird Photography Responsive Grid */
+  .bird-collage-grid {
+    grid-template-columns: 1.5fr 0.8fr 1.7fr;
+    grid-template-rows: clamp(220px, 24vw, 300px) clamp(50px, 5vw, 65px) clamp(200px, 22vw, 280px);
+    gap: 14px;
+  }
+
+  /* Bridal Grid Responsive Layout */
   .bridal-collage-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .bridal-item-left {
+    height: 480px;
+  }
+  .bridal-center-column {
+    height: 480px;
+  }
+  .bridal-item-top,
+  .bridal-item-bottom {
+    height: 232px;
   }
   .bridal-item-right {
     grid-column: 1 / -1;
     height: 380px;
   }
+
+  /* Posters & Logos Grid */
   .posters-showcase-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .poster-item-billie {
+    width: 100%;
+    aspect-ratio: 1200 / 1697;
+    height: auto;
+  }
+  .poster-stacked {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    height: auto;
   }
   .posters-col-right {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 20px;
+    align-items: center;
+  }
+  .logo-item-breakdown {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    height: auto;
   }
   .logo-breakdown-typography {
     grid-column: 1 / -1;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .logo-white-bold,
+  .breakdown-purple-bold {
+    display: inline-block;
+    margin: 0 6px;
+  }
+  .jute-item {
+    width: 100%;
+    aspect-ratio: 2506 / 3072;
+    height: auto;
+    max-width: 400px;
   }
 }
 
+/* --- TABLETS PORTRAIT (max-width: 868px) --- */
 @media (max-width: 868px) {
   .nav-menu, .btn-nav-hire {
     display: none;
@@ -1962,77 +2071,324 @@ main {
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 24px;
   }
   .hero-left {
     align-items: center;
+    margin-bottom: 10px;
+  }
+  .hero-role-text {
+    justify-content: center;
+  }
+  .hero-photo-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .hero-cutout-img {
+    max-height: 520px;
+    min-height: 320px;
+  }
+  .hero-right {
+    justify-content: center;
+    margin-bottom: 20px;
   }
   .about-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 36px;
+  }
+  .about-description {
+    margin-left: auto;
+    margin-right: auto;
   }
   .software-row, .action-pills-row {
     justify-content: center;
   }
+  .about-photo-wrapper {
+    width: clamp(240px, 45vw, 320px);
+  }
   .contact-card-container {
     grid-template-columns: 1fr;
+  }
+  .contact-left-card {
+    padding: 36px 30px;
+  }
+  .contact-right-card {
+    padding: 36px 30px;
   }
   .lightbox-nav-btn.prev-btn { left: 10px; }
   .lightbox-nav-btn.next-btn { right: 10px; }
 }
 
-@media (max-width: 640px) {
-  .hero-bg-title {
-    font-size: clamp(2.2rem, 11vw, 3.6rem);
-  }
-  .hero-photo-wrap {
-    max-width: 360px;
-  }
-  .hero-cutout-img {
-    max-height: 480px;
-  }
+/* --- LARGE PHABLETS & SMARTPHONES (max-width: 768px) --- */
+@media (max-width: 768px) {
+  /* Bird Photography Grid on Tablets & Phones */
   .bird-collage-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 14px;
+  }
+  .bird-item-topleft {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: clamp(190px, 32vw, 250px);
+  }
+  .bird-item-topright {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    height: clamp(190px, 32vw, 250px);
   }
   .nature-tag-center {
-    margin: 8px 0;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    padding: 10px 0;
+    margin: 4px 0;
   }
-  .bird-item-topleft,
-  .bird-item-topright,
-  .bird-item-bottomleft,
+  .bird-item-bottomleft {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    height: clamp(200px, 34vw, 260px);
+  }
   .bird-item-bottomright {
-    height: 260px;
-    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    height: clamp(200px, 34vw, 260px);
   }
+
+  /* Bridal Grid: 2 columns */
   .bridal-collage-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
   }
-  .bridal-item-left, .bridal-item-right {
-    height: 340px;
+  .bridal-item-left {
+    height: 380px;
   }
   .bridal-center-column {
-    height: auto;
+    height: 380px;
+    gap: 14px;
   }
-  .bridal-item-top, .bridal-item-bottom {
-    height: 240px;
+  .bridal-item-top,
+  .bridal-item-bottom {
+    height: 183px;
   }
+  .bridal-item-right {
+    grid-column: 1 / -1;
+    height: 340px;
+  }
+
   .posters-showcase-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .poster-item-billie {
+    width: 100%;
+    aspect-ratio: 1200 / 1697;
+    height: auto;
+  }
+  .poster-stacked {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    height: auto;
   }
   .posters-col-right {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
+  .logo-item-breakdown {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    height: auto;
+  }
+  .jute-item {
+    width: 100%;
+    aspect-ratio: 2506 / 3072;
+    height: auto;
+  }
+  .contact-header-bar {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+/* --- MOBILE PHONES (max-width: 580px) --- */
+@media (max-width: 580px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .hero-bg-title {
+    font-size: clamp(1.4rem, 6.5vw, 2.8rem);
+    letter-spacing: 0.08em;
+  }
+  .hero-bg-title-wrapper {
+    top: 10%;
+  }
+  .hero-name-heading {
+    font-size: clamp(1.6rem, 5.5vw, 2.1rem);
+  }
+  .hero-photo-wrap {
+    max-width: 340px;
+  }
+  .hero-cutout-img {
+    max-height: 420px;
+    min-height: 0;
+  }
+  .hero-radial-glow {
+    width: 280px;
+    height: 280px;
+  }
+
+  /* Bird Photography: Fluid Single-Column Flow */
+  .bird-collage-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .bird-item-topleft {
+    height: clamp(180px, 52vw, 240px);
+    width: 100%;
+  }
+  .bird-item-topright {
+    height: clamp(220px, 60vw, 280px);
+    width: 100%;
+  }
+  .nature-tag-center {
+    margin: 4px 0;
+    font-size: 1.8rem;
+  }
+  .bird-item-bottomleft {
+    height: clamp(220px, 60vw, 280px);
+    width: 100%;
+  }
+  .bird-item-bottomright {
+    height: clamp(180px, 52vw, 240px);
+    width: 100%;
+  }
+
+  /* Bridal Grid: Elegant Mobile Flow */
+  .bridal-collage-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .bridal-item-left {
+    height: clamp(280px, 75vw, 360px);
+  }
+  .bridal-center-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    height: auto;
+  }
+  .bridal-item-top,
+  .bridal-item-bottom {
+    height: clamp(160px, 45vw, 220px);
+  }
+  .bridal-item-right {
+    height: clamp(280px, 75vw, 360px);
+  }
+
+  /* Posters Stack */
+  .poster-item-billie,
+  .poster-stacked,
+  .logo-item-breakdown,
+  .jute-item {
+    height: auto;
+    max-width: 100%;
+  }
+
   .form-grid-2 {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
+  .form-field input,
+  .form-field textarea {
+    font-size: 16px; /* Prevents auto-zoom on iOS */
+  }
+  .form-action-row {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .btn-send-orange {
+    justify-content: center;
+    width: 100%;
+  }
+  .paper-plane-decor {
+    justify-content: center;
+  }
+
   .about-photo-wrapper {
-    width: 260px;
-    height: auto;
+    width: min(250px, 75vw);
   }
   .contact-header-bar {
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .lightbox-img {
+    max-width: 90vw;
+    max-height: 65vh;
+  }
+  .lightbox-dialog {
+    max-width: 94vw;
+  }
+  .lightbox-nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+  .lightbox-close-btn {
+    top: -42px;
+    right: 0;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* --- SMALL MOBILE / EXTRA NARROW (max-width: 380px) --- */
+@media (max-width: 380px) {
+  .hero-bg-title {
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+  }
+  .hero-role-text {
+    font-size: 0.78rem;
+  }
+  .hero-photo-wrap {
+    max-width: 290px;
+  }
+  .hero-cutout-img {
+    max-height: 360px;
+  }
+  .about-photo-wrapper {
+    width: 220px;
+  }
+  .action-pills-row {
+    gap: 6px;
+  }
+  .figma-pill {
+    padding: 6px 14px;
+    font-size: 0.74rem;
+  }
+  .contact-left-card,
+  .contact-right-card {
+    padding: 24px 16px;
+  }
+  .btn-hire-orange {
+    padding: 8px 18px;
+    font-size: 0.85rem;
   }
 }
