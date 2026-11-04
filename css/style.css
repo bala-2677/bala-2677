@@ -29,7 +29,7 @@
   --accent-green: #84e03b;
   --accent-purple-shoot: #8d6eb8;
   --accent-pink-my: #d9008f;
-  --accent-blue-posters: #29b6f6;
+  --accent-blue-posters: #2a9ee9;
   --accent-magenta-breakdown: #d946ef;
 
   /* Typography mapped directly from Desktop - 1 Figma file */
@@ -454,25 +454,29 @@ main {
 /* Huge Stylized Background Typography */
 .hero-bg-title-wrapper {
   position: absolute;
-  top: 18%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: clamp(75px, 10vh, 105px);
+  left: 0;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   pointer-events: none;
   z-index: 1;
+  padding: 0 16px;
 }
 
 .hero-bg-title {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 7.5vw, 8.2rem);
+  font-size: clamp(2.4rem, 6.8vw, 7.8rem);
   font-weight: 900;
-  letter-spacing: clamp(0.06em, 1.2vw, 0.14em);
+  letter-spacing: clamp(0.02em, 0.35vw, 0.05em);
   text-transform: uppercase;
   white-space: nowrap;
   user-select: none;
   line-height: 1.05;
   padding: 4px 8px;
+  margin: 0;
   background: linear-gradient(90deg, #C9C9C9 38.46%, #CD4E4E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1074,9 +1078,9 @@ main {
   align-items: center;
   justify-content: center;
   font-family: var(--font-techno);
-  font-size: clamp(1.6rem, 2.3vw, 2.2rem);
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-size: clamp(2.6rem, 4.2vw, 4.4rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
   background: transparent;
   padding: 0;
   margin: 0;
@@ -1085,7 +1089,14 @@ main {
 }
 
 .nat-white {
-  color: #ffffff;
+  background: linear-gradient(90deg, #FFFFFF 0%, #A1C75C 82.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  line-height: 1.15;
+  padding: 2px 4px;
 }
 
 .ure-green {
@@ -1253,43 +1264,49 @@ main {
 }
 
 .posters-slogan-card {
-  padding-top: 24px;
+  padding-top: 28px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 40px;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .serif-my {
   font-family: var(--font-serif-fashion);
-  font-size: 2.2rem;
+  font-size: 60px;
+  
   font-weight: 900;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   color: #ffffff;
   line-height: 1;
 }
 
 .blue-posters {
-  font-family: var(--font-display);
-  font-size: 2.3rem;
+  font-family: var(--font-serif-fashion);
+  font-size: clamp(2.6rem, 3.5vw, 4.2rem);
   font-weight: 900;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   color: var(--accent-blue-posters);
   line-height: 1.1;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .song-tells-story {
   font-family: var(--font-techno);
-  font-size: 1.05rem;
+  font-size: clamp(1.15rem, 1.4vw, 1.4rem);
   font-weight: 500;
-  line-height: 1.45;
+  line-height: 1.55;
   color: #d1d5db;
   letter-spacing: 0.02em;
+  width: fit-content;
+  text-align: left;
 }
 
-.story-indent {
-  display: inline-block;
-  margin-left: 50px;
+.story-center {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 /* Middle Column: Stacked 3 Music Posters (Full View 4:5 Aspect Ratio) */
@@ -1992,8 +2009,26 @@ main {
    17. RESPONSIVE DESIGN (MEDIA QUERIES)
    ------------------------------------------------------------- */
 
+/* --- LAPTOPS & MINI MONITORS (max-width: 1280px) --- */
+@media (max-width: 1280px) {
+  .hero-bg-title-wrapper {
+    top: clamp(70px, 9vh, 90px);
+  }
+  .hero-bg-title {
+    font-size: clamp(2rem, 6.2vw, 5.4rem);
+    letter-spacing: clamp(0.02em, 0.3vw, 0.04em);
+  }
+}
+
 /* --- TABLETS / SMALL LAPTOPS (max-width: 1050px) --- */
 @media (max-width: 1050px) {
+  .hero-bg-title-wrapper {
+    top: clamp(68px, 8.5vh, 85px);
+  }
+  .hero-bg-title {
+    font-size: clamp(1.8rem, 5.8vw, 4.2rem);
+    letter-spacing: clamp(0.015em, 0.25vw, 0.035em);
+  }
   .hero-container {
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -2104,18 +2139,20 @@ main {
   }
   .hero-bg-title-wrapper {
     position: absolute;
-    top: 78px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 72px;
+    left: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     pointer-events: none;
     z-index: 1;
-    padding: 0 10px;
+    padding: 0 12px;
   }
   .hero-bg-title {
-    font-size: clamp(1.15rem, 5.2vw, 2.5rem);
-    letter-spacing: clamp(0.03em, 0.6vw, 0.08em);
+    font-size: clamp(1.1rem, 4.8vw, 2.1rem);
+    letter-spacing: clamp(0.01em, 0.15vw, 0.025em);
     max-width: 100%;
     white-space: nowrap;
   }
@@ -2196,6 +2233,7 @@ main {
     grid-row: 2 / 3;
     padding: 10px 0;
     margin: 4px 0;
+    font-size: clamp(2.2rem, 5.5vw, 3rem);
   }
   .bird-item-bottomleft {
     grid-column: 1 / 2;
@@ -2275,11 +2313,11 @@ main {
     padding-top: 68px;
   }
   .hero-bg-title-wrapper {
-    top: 74px;
+    top: 68px;
   }
   .hero-bg-title {
-    font-size: clamp(1.1rem, 5.2vw, 1.85rem);
-    letter-spacing: 0.05em;
+    font-size: clamp(0.85rem, 4.3vw, 1.45rem);
+    letter-spacing: 0.015em;
   }
   .hero-container {
     padding-top: 48px;
@@ -2322,8 +2360,8 @@ main {
     width: 100%;
   }
   .nature-tag-center {
-    margin: 4px 0;
-    font-size: 1.8rem;
+    margin: 6px 0;
+    font-size: clamp(2rem, 7vw, 2.8rem);
   }
   .bird-item-bottomleft {
     height: clamp(220px, 60vw, 280px);
@@ -2428,8 +2466,8 @@ main {
 /* --- SMALL MOBILE / EXTRA NARROW (max-width: 380px) --- */
 @media (max-width: 380px) {
   .hero-bg-title {
-    font-size: clamp(1rem, 5vw, 1.3rem);
-    letter-spacing: 0.04em;
+    font-size: clamp(0.75rem, 4.2vw, 1.1rem);
+    letter-spacing: 0.01em;
   }
   .hero-container {
     padding-top: 42px;
